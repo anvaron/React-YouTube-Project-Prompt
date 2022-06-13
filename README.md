@@ -39,3 +39,13 @@ You will make use of the following packages:
 The following documents will help you to get started with YouTube:
 
 - [Getting and Implementing your YouTube API Key](./docs/youtube-api-key.md)
+
+### Trello workspace link
+
+https://trello.com/b/Jd9fokLO/youtube-clone
+
+### Developers
+
+Juan S Bowers
+Charlie Moran
+Oscar A Varon
