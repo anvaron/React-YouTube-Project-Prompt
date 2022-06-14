@@ -7,7 +7,7 @@ function About() {
 		<div className="about-main">
 			<h1>About</h1>
 			<p>
-				Teamwork detail section
+				Teamwork details section
 			</p>
 			<div className="about-contains">
 				<div className="members-about">
