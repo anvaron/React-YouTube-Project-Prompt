@@ -1,17 +1,20 @@
+import React from 'react';
+import { Route, Routes } from "react-router-dom";
+
 import Navbar from './components/Navbar';
 import Video from './components/Video';
-// import logo from './logo.svg';
+import About from "./components/About"
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        < Navbar />
-      </header>
-      <main>
-        < Video />
-      </main>
+      < Navbar />
+      <Routes>
+        <Route path="/" element={<Video />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </div>
   );
 }

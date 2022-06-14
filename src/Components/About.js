@@ -1,13 +1,13 @@
 import React from "react";
-import "./About.css";
-import banana from "../cutebanana.png"
+import "./styles/About.css";
 
 function About() {
+
 	return (
 		<div className="about-main">
-			<h1>YouTube-clone</h1>
+			<h1>About</h1>
 			<p>
-				Hello! We made this youtube clone together!
+				Teamwork detail section
 			</p>
 			<div className="about-contains">
 				<div className="members-about">
@@ -23,7 +23,7 @@ function About() {
 				<div className="github-links">
 					<h2>GitHub Links</h2>
 					<a target="blank" href="https://github.com/CharlieMoran">
-						Charlie's GitHub: <img className="gitlogo" src={banana} alt="logo" />
+						{/* Charlie's GitHub: <img className="gitlogo" src={banana} alt="logo" /> */}
 					</a>
 					<br />
 					<br />

@@ -5,8 +5,6 @@
 .about-main {
 	background-color: #282828;
 	color: white;
-	border-radius: 30px;
-	padding-top: 40px;
 }
 
 h1,
@@ -17,18 +15,14 @@ h2 {
 }
 
 h1 {
-	display: flex;
-	justify-content: center;
-	margin: 30px;
-	text-decoration: underline;
-	padding: 20px;
+	margin: 0;display: flex;justify-content: center;
+	
 }
 
 p {
 	display: flex;
 	justify-content: center;
-	margin: 30px;
-	padding: 20px;
+	
 	border-bottom: 1px solid grey;
 }
 
