@@ -38,12 +38,6 @@ export default class Home extends Component {
 			});
 	};
 
-	userInput=(e)=>{
-		this.setState({
-		  userInput:e.target.value,
-		})
-	  }
-
 	render() {
 		let videos = this.state.fetchdata.map((vid) => {
 			return (
