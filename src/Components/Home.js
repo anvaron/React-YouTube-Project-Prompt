@@ -10,6 +10,7 @@ export default class Home extends Component {
 			searchValue: "",
 			fetchdata: [],
 			toggle: true,
+			userInput: "",
 		};
 	}
 
@@ -37,12 +38,18 @@ export default class Home extends Component {
 			});
 	};
 
+	userInput=(e)=>{
+		this.setState({
+		  userInput:e.target.value,
+		})
+	  }
+
 	render() {
 		let videos = this.state.fetchdata.map((vid) => {
 			return (
 				<div>
 					<div className="vid">
-						<div onClick={() => this.props.updateVid(vid)}>
+						<div onClick={() => this.props.placeholderforOscarsVideoUpdater(vid)}>
 							<Link to={`/Video/${vid.id.videoId}`}>
 								<img
 									className="thumbnail-container"
