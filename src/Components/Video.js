@@ -1,13 +1,18 @@
 import React from "react";
+import YouTube from "react-youtube";
+import ReactPlayer from "react-player";
 
-class Video extends React.Component {
+const Video = ({videoId}) => {
+  const baseURL = `https://www.youtube.com/watch?v=` + {videoId};
 
-  render() {
-    return(
-      <>
-        <p>Video list</p>
-      </>
-    )
-  }
+  return (
+      <div>
+        <ReactPlayer url={baseURL} controls={true} />
+        {/* <YouTube
+          videoId={videoId}
+        /> */}
+      </div>
+  )
 }
+
 export default Video;
