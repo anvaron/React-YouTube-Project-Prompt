@@ -3,20 +3,20 @@ import { Route, Routes, useParams } from "react-router-dom";
 
 import Navbar from './components/Navbar';
 import VideoSearch from './components/VideoSearch';
-import Video from './components/VideoPlayer';
+import Video from './components/Video';
 import About from "./components/About"
 
 import './App.css';
 
 function App() {
-  const videoId = useParams().id;
-
+  
+  //console.log(videoId)
   return (
     <div className="App">
       < Navbar />
       <Routes>
         <Route path="/" element={<VideoSearch />} />
-        <Route path='/video/:videoId' element={<Video id={videoId}/>}>
+        <Route path='/video/:videoId' element={<Video />}>
             {/* <div className="app__mainpage">
               <VideoPlayer />
             </div> */}

@@ -20,11 +20,12 @@ import ReactPlayer from "react-player";
 // export default Video;
 
 function Video(props) {
-  //const videoId = useParams().id;
-  console.log("show video", props);
+  const videoId = useParams().videoId;
+  console.log("video par", useParams());
+  console.log("video id", videoId);
   return (
     <section>
-      <Youtube videoId={props.id} />
+      <Youtube videoId={videoId} />
       {/* <CommentSection videoId={videoId} /> */}
     </section>
   )
