@@ -5,7 +5,7 @@ import banana from "../cutebanana.png"
 function About() {
 	return (
 		<div className="about-main">
-			<h1>YouTube-clone</h1>
+			<h1>About</h1>
 			<p>
 				Hello! We made this youtube clone together!
 			</p>
@@ -18,7 +18,8 @@ function About() {
 					<h5>Oscar</h5>
 					<div>My name is Oscar. Blah Blah Blah</div>
 					
-					<h5>Juan</h5><div>My name is Juan. Blah Blah Blah</div>
+					<h5>Juan</h5><div>My name is Juan. R.I.P</div>
+                    
 				</div>
 				<div className="github-links">
 					<h2>GitHub Links</h2>
