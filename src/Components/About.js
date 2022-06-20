@@ -28,10 +28,10 @@ function About() {
 					</a>
 					<br />
 					<br />
-                    <a target="blank" href="https://github.com/anvaron">Oscar's Github</a>
+                    <a target="blank" href="https://github.com/anvaron">Oscar's Github 🗽</a>
                     <br />
                     <br />
-                    <a target="blank" href="https://github.com/bowersjuan">Juan's Github</a>
+                    <a target="blank" href="https://github.com/bowersjuan">Juan's Github 🪦</a>
 				</div>
 			</div>
 		</div>
