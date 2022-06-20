@@ -43,7 +43,7 @@ class Video extends React.Component {
         handleVideoSelect={this.handleVideoSelect} 
         videos={this.state.videos}
       />
-      : <p>No search results yet!</p>
+      : <p>No Search Results Yet! Please submit a search above!"</p>
       }
     </>
   )

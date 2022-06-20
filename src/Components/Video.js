@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router";
 import Youtube from "react-youtube";
-import ReactPlayer from "react-player";
+import VideoCommentForm from "./VideoCommentForm";
 
 // const Video = ({videoId}) => {
 //   const baseURL = `https://www.youtube.com/watch?v=` + {videoId};
@@ -25,8 +25,8 @@ function Video(props) {
   console.log("video id", videoId);
   return (
     <section>
-      <Youtube videoId={videoId} />
-      {/* <CommentSection videoId={videoId} /> */}
+      <Youtube videoId={videoId}  autoplay />
+      <VideoCommentForm videoId={videoId} />
     </section>
   )
 }

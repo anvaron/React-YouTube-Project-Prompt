@@ -17,14 +17,14 @@ For this project, you will work with at least one other person to recreate parts
 
 After having been assigned a group, complete the following:
 
-- [ ] Read the rest of this document in full.
-- [ ] Create a new [Trello board](https://trello.com/) with your group, making it public. Include three columns: "To Do", "Doing", and "Done". Make sure everyone has access to the board.
-- [ ] Have each member of the group read the guide on [working in groups](./docs/working-in-groups.md). Afterwards, discuss what you read about as a group.
-- [ ] Read the project requirements in the [requirements](./docs/requirements.md) document. For each feature, build a new card in the Trello.
-- [ ] Once you have built the cards you believe you need, prioritize the cards so that the most important are towards the top.
-- [ ] Have one person create a repository on GitHub. Invite your group members to be able to work on the repository.
-- [ ] Have one person create a react application with `create-react-app`. Update the `readme.md` file to include a link to your Trello board as well as the names of everyone in your group. Then, push up the code to the GitHub repository.
-- [ ] Submit your repository's URL _now_ even though you will only have two commits.
+- [ok] Read the rest of this document in full.
+- [ok] Create a new [Trello board](https://trello.com/) with your group, making it public. Include three columns: "To Do", "Doing", and "Done". Make sure everyone has access to the board.
+- [ok] Have each member of the group read the guide on [working in groups](./docs/working-in-groups.md). Afterwards, discuss what you read about as a group.
+- [ok] Read the project requirements in the [requirements](./docs/requirements.md) document. For each feature, build a new card in the Trello.
+- [ok] Once you have built the cards you believe you need, prioritize the cards so that the most important are towards the top.
+- [ok] Have one person create a repository on GitHub. Invite your group members to be able to work on the repository.
+- [ok] Have one person create a react application with `create-react-app`. Update the `readme.md` file to include a link to your Trello board as well as the names of everyone in your group. Then, push up the code to the GitHub repository.
+- [ok] Submit your repository's URL _now_ even though you will only have two commits.
 
 One goal of this project is to practice working on projects together. Therefore, it is OK if the process above takes some time. It's part of what is required to complete this project!
 
@@ -49,3 +49,6 @@ https://trello.com/b/Jd9fokLO/youtube-clone
 Juan S Bowers
 Charlie Moran
 Oscar A Varon
+
+REACT_APP_API_KEY=AIzaSyBaEwAR_c8CrnGQ8h4JmbSkj1sbZ8HKAxs
+REACT_APP_YOUTUBE_API_KEY=AIzaSyBKtwEmg2OKe8Dzk64tZstmGkbOOioEIaw

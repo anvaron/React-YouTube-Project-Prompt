@@ -24,7 +24,7 @@ import { Link } from "react-router-dom";
 const VideoList = ({videos , handleVideoSelect}) => {
   const searchList = videos.map((video) => {
       // return <VideoListItem key={video.id.videoId} video={video} handleVideoSelect={handleVideoSelect} />
-      return  <Link key={video.id.videoId} to={`/video/${video.id.videoId}`}>
+      return  <Link key={video.id.videoId} to={`/videos/${video.id.videoId}`}>
                 <div className=' video-item item'>
                   <img className='ui image' src={video.snippet.thumbnails.medium.url} alt={video.snippet.description}/>
                   <div className='content'>
