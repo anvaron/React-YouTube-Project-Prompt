@@ -22,7 +22,7 @@ import { Link } from "react-router-dom";
 // export default VideoList;
 
 const VideoList = ({videos , handleVideoSelect}) => {
-  const renderedVideos = videos.map((video) => {
+  const searchList = videos.map((video) => {
       // return <VideoListItem key={video.id.videoId} video={video} handleVideoSelect={handleVideoSelect} />
       return  <Link key={video.id.videoId} to={`/video/${video.id.videoId}`}>
                 <div className=' video-item item'>
@@ -36,6 +36,6 @@ const VideoList = ({videos , handleVideoSelect}) => {
               </Link>
   });
 
-  return <div className='ui relaxed divided list'>{renderedVideos}</div>;
+  return <div className='ui relaxed divided list'>{searchList}</div>;
 };
 export default VideoList;
