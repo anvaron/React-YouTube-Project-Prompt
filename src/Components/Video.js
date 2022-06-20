@@ -23,9 +23,17 @@ function Video(props) {
   const videoId = useParams().videoId;
   console.log("video par", useParams());
   console.log("video id", videoId);
+  const opts = {
+    width: '100%',
+    playerVars: {
+     // https://developers.google.com/youtube/player_parameters
+     autoplay: 0,
+    },
+   }; 
+
   return (
     <section>
-      <Youtube videoId={videoId}  autoplay />
+      <Youtube videoId={videoId} opts={opts} />
       <VideoCommentForm videoId={videoId} />
     </section>
   )

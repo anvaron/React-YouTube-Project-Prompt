@@ -16,11 +16,7 @@ function App() {
       < Navbar />
       <Routes>
         <Route path="/" element={<VideoSearch />} />
-        <Route path='/videos/:videoId' element={<Video />}>
-            {/* <div className="app__mainpage">
-              <VideoPlayer />
-            </div> */}
-        </Route>
+        <Route path='/videos/:videoId' element={<Video />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </div>
