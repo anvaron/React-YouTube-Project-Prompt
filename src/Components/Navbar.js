@@ -5,7 +5,7 @@ import "../styles/Navbar.css"
 function Navbar () {
   return (
     <div className="Navbar">
-      <span>Youtube</span>
+      <span>Youtube </span>
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
     </div>
