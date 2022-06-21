@@ -1,9 +1,11 @@
 .Navbar {
   padding: 1rem;text-align: left; background-color: #FA2201;
 }
-.Navbar a {
-  padding: 0 0.5rem; display: inline-block;font-size: 1rem;  font-weight: bold;text-decoration: none; color: #FFF;
+nav { display: flex; }
+.Navbar a.link {
+  padding: 0 0.8rem; display: inline-block;font-size: 1.2rem;font-weight: bold;line-height: 50px;
+  text-decoration: none; color: #FFF;
 }
-.Navbar span {
-  padding: 0 0.5rem;font-size: 1.6rem; font-weight: bold;color: #FFF;
+.Navbar a.logo {
+  padding: 0 0.5rem;display: inline-block
 }
