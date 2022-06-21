@@ -6,7 +6,7 @@ class VideoCommentForm extends React.Component {
     this.state = {
       name: '',
       comment: '',
-      commentList: [],//this.props.comments,
+      commentList: [],
       isValid: false,
     };
   }
@@ -44,27 +44,17 @@ class VideoCommentForm extends React.Component {
     // >> Checking field validations
     if(this.state.isValid) {
       let commentsArray = [...this.state.commentList];
-      const newComment = {};
-
-      // >> Validating if there are any previous comments 
-      // if(this.state.commentList.length > 0) {
-      //   commentList = [...this.state.commentList]
-      // }
+      //
       commentsArray.push({
                           "name": this.state.name,
                           "comment": this.state.comment
                         })
-      //console.log(newComment)
-      //commentsArray.push(newComment);
-      //console.log(commentList)
-
+      this.handleFormReset();
       this.setState({
         commentList: commentsArray,    
-      }, () => this.props.handleUpdateComments(this.state.commentList)
-      , () => this.handleFormReset());
+      },
+      () => this.props.handleUpdateComments(this.state.commentList));
     }
-    //console.log(this.state.commentList)
-    
   }
   
   render() {
