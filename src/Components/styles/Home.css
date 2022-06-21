@@ -79,7 +79,7 @@
 
 #form-container {
 	justify-content: center;
-	margin-left: 30%;
+	margin-left: 4%;
 	padding: 25px;
 	padding-top: 100px;
 }
@@ -93,7 +93,7 @@
 		width: 80%;
 	}
 	.search {
-		margin-right: 10px;
+		margin-right: 5px;
 		width: 150px;
 	}
 	#no-results {
