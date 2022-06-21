@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Modal from 'react-modal/lib/components/Modal';
+import "../styles/NotFound.css"
 
 function NotFound () {
   const [isOpen, setIsOpen] = useState(true);
@@ -17,10 +18,12 @@ function NotFound () {
         isOpen={isOpen}
         contentLabel="Not Found"
       >
-        <div>Something went wrong.</div>
-        <button type="button" onClick={handleOnClick}>
-          Go home
-        </button>
+        <section className='modal__view'>
+          <h1>Something went wrong.</h1>
+          <button type="button" onClick={handleOnClick}>
+            Go home
+          </button>
+        </section>
       </Modal>
     </>
   )
