@@ -18,7 +18,6 @@ function Video(props) {
   }; 
 
   const handleSubmit = (commentList) => {
-    
     //Updating comments
     setVideoComment({commentList})
     setHasComment(true);
