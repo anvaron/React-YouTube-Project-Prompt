@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Modal from 'react-modal/lib/components/Modal';
 
 function NotFound () {
@@ -10,7 +10,7 @@ function NotFound () {
     () => navigate('/', {replace: true}), [navigate], () => setIsOpen(false));
   
   Modal.setAppElement("#root");  
-  
+
   return (
     <>
       <Modal
