@@ -1,6 +1,5 @@
 import React from 'react';
-import { Route, Routes, useParams } from "react-router-dom";
-
+import { Route, Routes } from "react-router-dom";
 import Navbar from './components/Navbar';
 import VideoSearch from './components/VideoSearch';
 import Video from './components/Video';
@@ -12,7 +11,7 @@ function App() {
   
   return (
     <div className="App">
-      < Navbar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<VideoSearch />} />
         <Route path='/videos/:videoId' element={<Video />} />

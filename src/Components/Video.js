@@ -5,10 +5,12 @@ import VideoCommentForm from "./VideoCommentForm";
 import VideoCommentList from "./VideoCommentList";
 
 function Video(props) {
+  // >> Setting hooks
   const [videoComment, setVideoComment] = useState([]);
   const [hasComment, setHasComment] = useState(false);
   const videoId = useParams().videoId;
-  //
+  
+  // >> Video player settings
   const opts = {
     width: '50%',
     playerVars: {
@@ -18,7 +20,7 @@ function Video(props) {
   }; 
 
   const handleSubmit = (commentList) => {
-    //Updating comments
+    //Updating comments state
     setVideoComment({commentList})
     setHasComment(true);
   };
