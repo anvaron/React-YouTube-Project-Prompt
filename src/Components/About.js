@@ -4,36 +4,42 @@ import "../styles/About.css";
 function About() {
 
 	return (
-		<div className="about-main">
+		<section className="about-main">
 			<h1>About</h1>
-			<p>
-				Teamwork details section
-			</p>
+			<p>Teamwork details section</p>
 			<div className="about-contains">
-				<div className="members-about">
-					<h2>Members</h2>
-                    <h5>Charlie Moran</h5>
-					<div>Hello! My name is Charlie and I am a banana! 🍌</div>
-
-					<h5>Oscar</h5>
-					<div>My name is Oscar. Blah Blah Blah</div>
-					
-					<h5>Juan</h5><div>My name is Juan. Blah Blah Blah</div>
+				<h2>Members</h2>
+				<div className="member-data">
+					<h4>Oscar A Varon</h4>
+					<div>My name is Oscar. I’m a Software Engineer with a passion for building software.</div>
+				</div>
+				<div className="member-data">
+					<h4>Charlie Moran</h4>
+					<div>My name is Charlie Moran. I’m a Software Engineer with a passion for building software.</div>
+				</div>
+				<div className="member-data">
+					<h4>Juan Bowers</h4>
+					<div>My name is Oscar. I’m a Software Engineer with a passion for building software.</div>
 				</div>
 				<div className="github-links">
 					<h2>GitHub Links</h2>
-					<a target="blank" href="https://github.com/CharlieMoran">
-						{/* Charlie's GitHub: <img className="gitlogo" src={banana} alt="logo" /> */}
-					</a>
-					<br />
-					<br />
-                    <a target="blank" href="https://github.com/anvaron">Oscar's Github</a>
-                    <br />
-                    <br />
-                    <a target="blank" href="https://github.com/bowersjuan">Juan's Github</a>
+					<ul>
+						<li>
+							<p>Project Manager:</p>
+							<a target="blank" href="https://github.com/anvaron">Oscar A Varon</a>
+						</li>
+						<li>
+							<p>Software Engineer:</p>
+							<a target="blank" href="https://github.com/CharlieMoran">CharlieMoran</a>
+						</li>
+						<li>
+							<p>Software Engineer:</p>
+							<a target="blank" href="https://github.com/bowersjuan">Juan Bowers</a>
+						</li>
+					</ul>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 export default About;
