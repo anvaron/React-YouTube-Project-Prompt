@@ -4,34 +4,75 @@ class VideoCommentForm extends React.Component {
   constructor() {
     super();
     this.state = {
-      name: "",
-      comment: "",
+      name: '',
+      comment: '',
+      commentList: [],//this.props.comments,
+      isValid: false,
     };
   }
 
   handleNameChange = (event) => {
     const { value } = event.target;
-    this.setState({ name: value });
+    if (value !== ''){
+      this.setState({
+        name: value,
+        isValid: true,
+      });
+    }
   };
 
   handleCommentChange = (event) => {
     const { value } = event.target;
-    this.setState({ comment: value });
+    if (value !== ''){
+      this.setState({
+        comment: value,
+        isValid: true,
+      });
+    }
   };
 
-  clearInput = () => {
+  handleFormReset = () => {
     this.setState({
-      name: "",
-      comment: "",
+      name: '',
+      comment: '',
+      isValid: false,
     });
-  };
+  }
 
+  handleSubmit = event => {
+    event.preventDefault();
+    // >> Checking field validations
+    if(this.state.isValid) {
+      let commentsArray = [...this.state.commentList];
+      const newComment = {};
+
+      // >> Validating if there are any previous comments 
+      // if(this.state.commentList.length > 0) {
+      //   commentList = [...this.state.commentList]
+      // }
+      commentsArray.push({
+                          "name": this.state.name,
+                          "comment": this.state.comment
+                        })
+      //console.log(newComment)
+      //commentsArray.push(newComment);
+      //console.log(commentList)
+
+      this.setState({
+        commentList: commentsArray,    
+      }, () => this.props.handleUpdateComments(this.state.commentList)
+      , () => this.handleFormReset());
+    }
+    //console.log(this.state.commentList)
+    
+  }
+  
   render() {
     const { name, comment } = this.state;
     const { updateCommentHandler } = this.props;
 
     return (
-      <form  >
+      <form onSubmit={this.handleSubmit} >
         <div className="form-control">
           <label htmlFor="name">Name </label>
           <input
@@ -55,10 +96,10 @@ class VideoCommentForm extends React.Component {
           />
         </div>
         <button
-          onClick={() => {
-            updateCommentHandler(name, comment);
-            this.clearInput();
-          }}
+          // onClick={() => {
+          //   updateCommentHandler(name, comment);
+          //   //this.clearInput();
+          // }}
         >
           Submit
         </button>

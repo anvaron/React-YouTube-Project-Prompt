@@ -6,18 +6,18 @@ import { Box } from "@material-ui/core";
 
 // function Search (props) {
 class Search extends React.Component {
-  //constructor () 
+  //
   state = {
-    term: ''
+    keyWord: ''
   };
   handleChange = (event) => {
       this.setState({
-          term: event.target.value
+        keyWord: event.target.value
       });
   };
   handleSubmit = event => {
       event.preventDefault();
-      this.props.handleFormSubmit(this.state.term);
+      this.props.handleFormSubmit(this.state.keyWord);
   }
   
 
@@ -44,7 +44,7 @@ class Search extends React.Component {
                   onChange={this.handleChange} 
                   name='video-search'
                   placeholder="Search"  
-                  value={this.state.term}
+                  value={this.state.keyWord}
                 />
                 <button 
                   //onSubmit={this.handleSubmit} 

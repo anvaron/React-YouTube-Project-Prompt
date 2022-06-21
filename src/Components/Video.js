@@ -1,41 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router";
 import Youtube from "react-youtube";
 import VideoCommentForm from "./VideoCommentForm";
-
-// const Video = ({videoId}) => {
-//   const baseURL = `https://www.youtube.com/watch?v=` + {videoId};
-//   console.log(baseURL)
-
-//   return (
-//       <div className="player">
-//         <ReactPlayer url={baseURL} controls={true} />
-//         {/* <YouTube
-//           videoId={videoId}
-//         /> */}
-//       </div>
-//   )
-// }
-
-// export default Video;
+import VideoCommentList from "./VideoCommentList";
 
 function Video(props) {
+  const [videoComment, setVideoComment] = useState([]);
+  const [hasComment, setHasComment] = useState(false);
   const videoId = useParams().videoId;
-  console.log("video par", useParams());
-  console.log("video id", videoId);
+  //
   const opts = {
-    width: '100%',
+    width: '50%',
     playerVars: {
      // https://developers.google.com/youtube/player_parameters
      autoplay: 0,
     },
-   }; 
+  }; 
+
+  const handleSubmit = (commentList) => {
+    
+    //Updating comments
+    setVideoComment({commentList})
+    setHasComment(true);
+  };
 
   return (
-    <section>
+    <>
       <Youtube videoId={videoId} opts={opts} />
-      <VideoCommentForm videoId={videoId} />
-    </section>
+      <VideoCommentForm handleUpdateComments={handleSubmit} />
+      {hasComment ? <VideoCommentList comment={videoComment} /> : null }
+    </>
   )
 }
 

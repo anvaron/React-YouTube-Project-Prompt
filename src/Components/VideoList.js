@@ -1,25 +1,6 @@
 import React, { useState } from "react";
-import VideoListItem from "./VideoListItem";
 import { Link } from "react-router-dom";
-
-// function VideoList (props) {
-
-//   const { videoSearch } = props;
-//   const [videoRows, setVideoRows] = useState([]);
-//   //const list = Array.from(videoSearch)
-
-//   return (
-//     <>
-//     {/* {console.log(typeof list)} */}
-//     {/* {console.log(videoSearch)} */}
-//       {/* {Array.from(videoSearch).map(e => {
-//         return e
-//       })} */}
-//     </>
-//   )
-// }
-
-// export default VideoList;
+import { Grid } from '@material-ui/core';
 
 const VideoList = ({videos , handleVideoSelect}) => {
   const searchList = videos.map((video) => {
