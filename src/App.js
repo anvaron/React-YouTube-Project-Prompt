@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import VideoSearch from "./components/VideoSearch";
-import Video from "./components/Video";
-import About from "./components/About"
-import NotFound from "./components/NotFound";
+import Navbar from "./Components/Navbar";
+import VideoSearch from "./Components/VideoSearch";
+import Video from "./Components/Video";
+import About from "./Components/About"
+import NotFound from "./Components/NotFound";
 
 import './App.css';
 
