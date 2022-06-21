@@ -41,10 +41,10 @@ class VideoCommentForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    // >> Checking field validations
+    // 
     if(this.state.isValid) {
       let commentsArray = [...this.state.commentList];
-      //
+      // >> Adding new comment
       commentsArray.push({
                           "name": this.state.name,
                           "comment": this.state.comment
@@ -59,41 +59,35 @@ class VideoCommentForm extends React.Component {
   
   render() {
     const { name, comment } = this.state;
-    const { updateCommentHandler } = this.props;
 
     return (
-      <form onSubmit={this.handleSubmit} >
-        <div className="form-control">
-          <label htmlFor="name">Name </label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            placeholder="Name..."
-            value={name}
-            onChange={this.handleNameChange}
-          />
-        </div>
-        <div className="form-control">
-          <label htmlFor="comment">Comment </label>
-          <input
-            id="comment"
-            name="comment"
-            type="text"
-            placeholder="..."
-            value={comment}
-            onChange={this.handleCommentChange}
-          />
-        </div>
-        <button
-          // onClick={() => {
-          //   updateCommentHandler(name, comment);
-          //   //this.clearInput();
-          // }}
-        >
-          Submit
-        </button>
-      </form>
+      <>
+        <form onSubmit={this.handleSubmit} >
+          <div className="form-control">
+            <label htmlFor="name">Name </label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Name..."
+              value={name}
+              onChange={this.handleNameChange}
+            />
+          </div>
+          <div className="form-control">
+            <label htmlFor="comment">Comment </label>
+            <input
+              id="comment"
+              name="comment"
+              type="text"
+              placeholder="..."
+              value={comment}
+              onChange={this.handleCommentChange}
+            />
+          </div>
+          <button>Submit</button>
+        </form>
+      </>
     );
   }
 }

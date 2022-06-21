@@ -10,7 +10,6 @@ import './App.css';
 
 function App() {
   
-  //console.log(videoId)
   return (
     <div className="App">
       < Navbar />

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Search from "./Search";
 import VideoList from "./VideoList";
-import axios from 'axios';
-
 import youtubeAPI from "../data/youtubeAPI";
 
 class Video extends React.Component {
@@ -29,19 +27,15 @@ class Video extends React.Component {
   render() {
     return(
       <>
-        <Search 
-          // handleOnChange={handleOnChange}
-          // handleOnClick={handleOnClick}
-          // search={videoSearch} 
+        <Search
           handleFormSubmit={this.handleSubmit}
         />
-        {/* <VideoList videoSearch={setVideoSearch}/> */}
         {this.state.hasSearch ? 
           <VideoList 
-          handleVideoSelect={this.handleVideoSelect} 
-          videos={this.state.videos}
-        />
-        : <p>No Search Results Yet! Please submit a search above!"</p>
+            handleVideoSelect={this.handleVideoSelect} 
+            videos={this.state.videos}
+          />
+          : <p>No Search Results Yet! Please submit a search above!"</p>
         }
       </>
     )

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import { Grid } from '@material-ui/core';
 
-const VideoList = ({videos , handleVideoSelect}) => {
+const VideoList = ({videos}) => {
   const searchList = videos.map((video) => {
     return  <Link key={video.id.videoId} to={`/videos/${video.id.videoId}`}>
               <div className=' video-item item'>
