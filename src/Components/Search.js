@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import SearchIcon from '@material-ui/icons/Search';
-import { TextField } from "@material-ui/core";
-import { Box } from "@material-ui/core";
+// import SearchIcon from '@material-ui/icons/Search';
+// import { TextField } from "@material-ui/core";
+// import { Box } from "@material-ui/core";
 
 
 // function Search (props) {
@@ -48,8 +48,8 @@ class Search extends React.Component {
                 />
                 <button 
                   //onSubmit={this.handleSubmit} 
-                  className="btn">
-                  <SearchIcon />
+                  className="btn">Search
+                  {/* <SearchIcon /> */}
                 </button>
               </div>
           </form>
