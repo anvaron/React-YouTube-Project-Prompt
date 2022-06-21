@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from "react-router-dom";
-import NavBar from './components/NavBar';
+import Navbar from './components/Navbar';
 import VideoSearch from './components/VideoSearch';
 import Video from './components/Video';
 import About from "./components/About"
@@ -12,7 +12,7 @@ function App() {
   
   return (
     <div className="App">
-      <NavBar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<VideoSearch />} />
         <Route path='/videos/:videoId' element={<Video />} />
