@@ -5,23 +5,28 @@ function About() {
 
 	return (
 		<section className="about-main">
-			<h1>About</h1>
-			<p>Teamwork details section</p>
-			<div className="about-contains">
-				<h2>Members</h2>
-				<div className="member-data">
-					<h4>Oscar A Varon</h4>
-					<div>My name is Oscar. I’m a Software Engineer with a passion for building software.</div>
+			<div className="header">
+				<h1>Youtube React App</h1>
+				<p>This project is designed to assess the React skills we have gained during this module</p>
+			</div>
+			
+			<div className="team-info">
+				<div className="team">
+					<h2>Members</h2>
+					<div className="member-data">
+						<h4>Oscar A Varon</h4>
+						<div>My name is Oscar. I’m a Software Engineer with a passion for building software.</div>
+					</div>
+					<div className="member-data">
+						<h4>Charlie Moran</h4>
+						<div>My name is Charlie Moran. I’m a Software Engineer with a passion for building software.</div>
+					</div>
+					<div className="member-data">
+						<h4>Juan Bowers</h4>
+						<div>My name is Juan. I’m a Software Engineer with a passion for building software.</div>
+					</div>
 				</div>
-				<div className="member-data">
-					<h4>Charlie Moran</h4>
-					<div>My name is Charlie Moran. I’m a Software Engineer with a passion for building software.</div>
-				</div>
-				<div className="member-data">
-					<h4>Juan Bowers</h4>
-					<div>My name is Oscar. I’m a Software Engineer with a passion for building software.</div>
-				</div>
-				<div className="github-links">
+				<div className="team-liks">
 					<h2>GitHub Links</h2>
 					<ul>
 						<li>

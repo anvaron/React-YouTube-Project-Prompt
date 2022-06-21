@@ -1,17 +1,9 @@
 * {
-	font-family: Roboto, Arial, sans-serif;
+	
 }
-
-.about-main {
-	background-color: #282828;
-	color: white;
-}
-
 h1,
 h2 {
-	background: -webkit-linear-gradient(#eee, #333);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	
 }
 
 h1 {
@@ -29,24 +21,22 @@ p {
 h5 {
 	text-decoration: underline;
 }
+.about-main {
+	
+}
 
-.about-contains {
+.team-info {
 	display: grid;
-	grid-template-areas: "first second";
-	background-color: #282828;
-	border-radius: 30px;
+	grid-template-columns: 1fr 1fr;
+	
+}
+.team {
+	
 }
 
-.members-about {
-	border-right: 2px solid grey;
-	margin-left: 40px;
-	grid-area: first;
+.team-liks {
 	padding: 20px;
-}
-
-.github-links {
-	padding: 20px;
-	grid-area: second;
+	/* grid-area: second; */
 }
 
 a {
