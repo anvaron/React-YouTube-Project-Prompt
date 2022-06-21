@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import "./Home.css";
+import "./styles/Home.css";
 import { Link } from "react-router-dom";
+import VideoList from "./VideoList"
 
 export default class Home extends Component {
 	constructor() {
@@ -43,7 +44,7 @@ export default class Home extends Component {
 			return (
 				<div>
 					<div className="vid">
-						<div onClick={() => this.props.placeholderforOscarsVideoUpdater(vid)}>
+						<div onClick={() => this.props.VideoList(vid)}>
 							<Link to={`/Video/${vid.id.videoId}`}>
 								<img
 									className="thumbnail-container"

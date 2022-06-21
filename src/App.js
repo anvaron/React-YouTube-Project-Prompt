@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Routes } from "react-router-dom";
 import Navbar from './Components/Navbar.js';
-import Video from './Components/Video.js';
 import About from "./Components/About.js"
+import Home from "./Components/Home";
 import './App.css';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       < Navbar />
       <Routes>
-        <Route path="/" element={<Video />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Home from "./Home.js"
-import "./VideoPage.css"
+import "./styles/VideoPage.css"
 
 export default class VideoPage extends Component {
     constructor(props) {
