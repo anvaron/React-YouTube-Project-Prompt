@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "../styles/Search.css"
+import { Grid, Box } from "@mui/material";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 //class Search extends React.Component {
 function Search (props) {
@@ -22,36 +25,54 @@ function Search (props) {
     // });
     setMaxResults(event.target.value)
   };
+  const handleResetForm = () => {
+    setInputSearch('')
+    setMaxResults(1)
+  };
   const handleSubmit = event => {
     event.preventDefault();
     props.handleFormSubmit(inputSearch, maxResults);
+    handleResetForm();
   }
   
   //render () {
     return(
       <>
-        <section className='search__form ui segment'>
-          <form onSubmit={handleSubmit} className='ui form'>
-            <div className='field'>
-              <input
-                type="text"
-                onChange={handleSearchChange} 
-                name='search'
-                placeholder="Search"  
+        <div className='search__form'>
+          <form className='ui form'>
+            <Grid spacing={2}>
+              
+              <TextField 
+                id="outlined-size-small"
+                label="Search"
+                type="search"
+                name="search"
+                size="small"
+                onChange={handleSearchChange}
                 value={inputSearch}
               />
-              <input
+              
+              <TextField
+                id="outlined-size-small"
+                label="Max Results"
                 type="number"
-                onChange={handleMaxResultsChange} 
-                name='max-results'
+                name="max-results"
+                size="small"
                 value={maxResults}
+                onChange={handleMaxResultsChange}
               />
-              <button 
-                className="btn">Search
-              </button>
-            </div>
+             </Grid>
+             <Grid>
+              <Button 
+                  variant="contained"
+                  color="error"
+                  onClick={handleSubmit}
+                >
+                Search
+              </Button>
+             </Grid>
           </form>
-        </section>
+        </div>
       </>
     )
   //}  

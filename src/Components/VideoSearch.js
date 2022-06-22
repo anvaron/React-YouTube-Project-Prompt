@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Search from "./Search";
 import VideoList from "./VideoList";
 import youtubeAPI from "../data/youtubeAPI";
+import Stack from '@mui/material/Stack';
+import SnackbarContent from '@mui/material/SnackbarContent';
+import { Container, Box } from "@mui/material";
 
 class Video extends React.Component {
   state = {
@@ -27,7 +30,8 @@ class Video extends React.Component {
  
   render() {
     return(
-      <section>
+      <Container maxWidth="md">
+      <section className="search__layout">
         <Search
           handleFormSubmit={this.handleSubmit}
         />
@@ -36,9 +40,21 @@ class Video extends React.Component {
             handleVideoSelect={this.handleVideoSelect} 
             videos={this.state.videos}
           />
-          : <p>No Search Results Yet! Please submit a search above!"</p>
+          : 
+          <Box
+            m="auto"
+            display="flex" 
+            width={500} height={50} 
+            bgcolor="#cfd8dc"
+            alignItems="center"
+            justifyContent="center"
+            className="search__label"
+          >
+            No Search Results Yet! Please submit a search above!  
+          </Box>
         }
       </section>
+      </Container>
     )
   }
 }

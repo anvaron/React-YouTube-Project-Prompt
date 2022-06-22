@@ -1,4 +1,7 @@
 import React from "react";
+import { Grid, Box } from "@mui/material";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 class VideoCommentForm extends React.Component {
   constructor() {
@@ -63,29 +66,35 @@ class VideoCommentForm extends React.Component {
     return (
       <>
         <form onSubmit={this.handleSubmit} >
-          <div className="form-control">
-            <label htmlFor="name">Name </label>
-            <input
-              id="name"
-              name="name"
+          <>
+            <TextField 
+              id="outlined-size-small"
+              label="Name"
               type="text"
-              placeholder="Name..."
+              name="name"
+              size="small"
               value={name}
               onChange={this.handleNameChange}
             />
-          </div>
-          <div className="form-control">
-            <label htmlFor="comment">Comment </label>
-            <input
-              id="comment"
-              name="comment"
+          </>
+          <>
+            <TextField 
+              id="outlined-size-small"
+              label="Comment"
               type="text"
-              placeholder="..."
+              name="comment"
+              size="small"
               value={comment}
               onChange={this.handleCommentChange}
             />
-          </div>
-          <button>Submit</button>
+          </>
+          <Button 
+              variant="contained"
+              color="error"
+              onClick={this.handleSubmit}
+            >
+            Submit
+          </Button>
         </form>
       </>
     );

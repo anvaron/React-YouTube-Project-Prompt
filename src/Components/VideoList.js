@@ -1,19 +1,28 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import { Grid } from '@material-ui/core';
+import { Grid, Box } from "@mui/material";
 
 const VideoList = ({videos}) => {
   const searchList = videos.map((video) => {
-    return  <Link key={video.id.videoId} to={`/videos/${video.id.videoId}`}>
-              <div className=' video-item item'>
-                <img className='ui image' src={video.snippet.thumbnails.medium.url} alt={video.snippet.description}/>
-                <div className='content'>
-                    {video.snippet.title}
-                </div>
-              </div>
-            </Link>
+    return  <Grid item xs={6}>
+              <Link key={video.id.videoId} to={`/videos/${video.id.videoId}`}>
+                <img className="video__thumb"
+                  src={video.snippet.thumbnails.medium.url} 
+                  alt={video.snippet.description}
+                />
+                <Box className="video__info"
+                    m="auto"
+                    alignItems="center"
+                    justifyContent="center"
+                >
+                  {video.snippet.title}  
+                </Box>
+              </Link>
+            </Grid>
   });
 
-  return <div className='ui relaxed divided list'>{searchList}</div>;
+  return  <Grid container spacing={2} className="video__list" >
+            {searchList}
+          </Grid>
 };
 export default VideoList;
