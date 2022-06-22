@@ -5,8 +5,8 @@ function VideoCommentList(props) {
   const getCommentsByVideo = (e) => {
     //
     if(e.commentList.length !== 0) {
-      return (e.commentList).map((comment) =>  
-        <li key={comment.id}>
+      return (e.commentList).map((comment, index) =>  
+        <li key={index}>
           {comment['name']} {comment['comment']}
         </li>);
     }

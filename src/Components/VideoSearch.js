@@ -9,10 +9,11 @@ class Video extends React.Component {
     hasSearch: false,
     selectedVideo: null
   }
-  handleSubmit = async (searchInput) => {
+  handleSubmit = async (searchInput, maxResultsInput) => {
     const response = await youtubeAPI.get('/search', {
       params: {
-          q: searchInput
+          q: searchInput,
+          maxResults: maxResultsInput
       }
     })
     this.setState({
@@ -26,7 +27,7 @@ class Video extends React.Component {
  
   render() {
     return(
-      <>
+      <section>
         <Search
           handleFormSubmit={this.handleSubmit}
         />
@@ -37,7 +38,7 @@ class Video extends React.Component {
           />
           : <p>No Search Results Yet! Please submit a search above!"</p>
         }
-      </>
+      </section>
     )
   }
 }

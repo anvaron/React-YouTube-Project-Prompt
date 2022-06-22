@@ -1,47 +1,60 @@
 import React, { useState } from "react";
-// import SearchIcon from '@material-ui/icons/Search';
-// import { TextField } from "@material-ui/core";
-// import { Box } from "@material-ui/core";
+import "../styles/Search.css"
 
-class Search extends React.Component {
+//class Search extends React.Component {
+function Search (props) {
+
+  const [inputSearch, setInputSearch] = useState('');
+  const [maxResults, setMaxResults] = useState(1);
   //
-  state = {
-    keyWord: ''
+  // state = {
+  //   keyWord: ''
+  // };
+  const handleSearchChange = (event) => {
+    // this.setState({
+    //   keyWord: event.target.value
+    // });
+    setInputSearch(event.target.value)
   };
-  handleChange = (event) => {
-    this.setState({
-      keyWord: event.target.value
-    });
+  const handleMaxResultsChange = (event) => {
+    // this.setState({
+    //   keyWord: event.target.value
+    // });
+    setMaxResults(event.target.value)
   };
-  handleSubmit = event => {
+  const handleSubmit = event => {
     event.preventDefault();
-    this.props.handleFormSubmit(this.state.keyWord);
+    props.handleFormSubmit(inputSearch, maxResults);
   }
   
-  render () {
+  //render () {
     return(
       <>
-        <div className='search-bar ui segment'>
-          <form onSubmit={this.handleSubmit} className='ui form'>
+        <section className='search__form ui segment'>
+          <form onSubmit={handleSubmit} className='ui form'>
             <div className='field'>
               <input
                 type="text"
-                onChange={this.handleChange} 
-                name='video-search'
+                onChange={handleSearchChange} 
+                name='search'
                 placeholder="Search"  
-                value={this.state.keyWord}
+                value={inputSearch}
+              />
+              <input
+                type="number"
+                onChange={handleMaxResultsChange} 
+                name='max-results'
+                value={maxResults}
               />
               <button 
-                //onSubmit={this.handleSubmit} 
                 className="btn">Search
-                {/* <SearchIcon /> */}
               </button>
             </div>
           </form>
-        </div>
+        </section>
       </>
     )
-  }  
+  //}  
 }
 
 export default Search;
