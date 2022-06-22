@@ -65,7 +65,7 @@ class VideoCommentForm extends React.Component {
 
     return (
       <>
-        <form onSubmit={this.handleSubmit} >
+        <form onSubmit={this.handleSubmit} className="form__video__comment">
           <>
             <TextField 
               id="outlined-size-small"
