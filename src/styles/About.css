@@ -49,10 +49,13 @@ h5 {
 
 }
 .MuiTabs-root .MuiTab-root {
-	font-weight: 700;color: #e63946;
+	font-weight: 700;color: #333;
+}
+.MuiTabs-root .MuiTab-root.Mui-selected {
+	color: #e63946;border-bottom: 4px solid #e63946;box-shadow: none;
 }
 .MuiTabs-root .MuiTab-root.Mui-selected span {
-	border-bottom: 2px solid #e63946;
+	border-bottom: 0px solid #e63946;
 }
 
 .gitlogo {

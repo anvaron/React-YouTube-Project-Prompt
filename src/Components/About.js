@@ -118,7 +118,7 @@ function About() {
 							<ListItemText 
 								primary="Project Manager" 
 								secondary={
-									<a target="blank" href="https://github.com/anvaron">Oscar A Varon</a>
+									<a target="blank" href="https://github.com/anvaron">Oscar's GitHub</a>
 								} />
 						</ListItem>
 						<Divider variant="inset" component="li" />
@@ -131,7 +131,7 @@ function About() {
 							<ListItemText 
 								primary="Software Engineer" 
 								secondary={
-									<a target="blank" href="https://github.com/CharlieMoran">CharlieMoran</a>
+									<a target="blank" href="https://github.com/CharlieMoran">Charlie's GitHub</a>
 								} />
 						</ListItem>
 						<Divider variant="inset" component="li" />
@@ -144,7 +144,7 @@ function About() {
 							<ListItemText 
 								primary="Software Engineer" 
 								secondary={
-									<a target="blank" href="https://github.com/bowersjuan">Juan Bowers</a>
+									<a target="blank" href="https://github.com/bowersjuan">Juan's GitHub</a>
 								} />
 						</ListItem>
 						<Divider variant="inset" component="li" />
