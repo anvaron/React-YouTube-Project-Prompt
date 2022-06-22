@@ -1,7 +1,9 @@
 .breadcrumb {
   margin: 1rem 0 !important;
 }
-
+.MuiList-root {
+  margin: 2rem;
+}
 .form__video__comment {
  margin: 1rem 0;
 }
