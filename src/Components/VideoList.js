@@ -4,8 +4,8 @@ import { Grid, Box } from "@mui/material";
 
 const VideoList = ({videos}) => {
   const searchList = videos.map((video) => {
-    return  <Grid item xs={6} >
-              <Link key={video.id.videoId} to={`/videos/${video.id.videoId}`}>
+    return  <Grid item xs={6} key={video.id.videoId}>
+              <Link to={`/videos/${video.id.videoId}`}>
                 <img className="video__thumb"
                   src={video.snippet.thumbnails.medium.url} 
                   alt={video.snippet.description}
@@ -21,7 +21,7 @@ const VideoList = ({videos}) => {
             </Grid>
   });
 
-  return  <Grid container spacing={2} className="video__search__list" >
+  return  <Grid container spacing={2} >
             {searchList}
           </Grid>
 };

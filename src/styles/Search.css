@@ -5,12 +5,12 @@
 
 }
 .search__form {
-  padding: 2rem 0;
+  padding: 0.5rem 0;
 }
-.search__form .MuiGrid-root {
-  margin: 0.5rem 0;
+.search__form .MuiFormControl-root {
+  margin: 0rem 0;
 }
-.search__form .MuiGrid-root .MuiOutlinedInput-root {
+.search__form .MuiFormControl-root .MuiOutlinedInput-root {
   margin: 0.2rem;
 }
 .search__label {
@@ -18,18 +18,19 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 600;color: #333;
 }
-.video__search__list {
-
+/* Video search list */
+.search__list {
+ padding: 1rem;
 }
-.video__search__list a {
-  font-weight: 700;color: #e63946;
-  text-decoration: none;
+.search__list a {
+  text-decoration: none;  
 }
-.video__thumb {
+.search__list .video__thumb {
   border: 10px solid #DCDCDC;border-radius: 3px;
 }
-.video__info {
+.search__list .video__info {
   padding: 1rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 700;color: #333;  
+  font-weight: 700;color: #e63946;
+  
 }

@@ -9,6 +9,7 @@ import Checkbox from '@mui/material/Checkbox';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import ImageIcon from '@mui/icons-material/Image';
+import PersonIcon from '@mui/icons-material/Person';
 import WorkIcon from '@mui/icons-material/Work';
 import Divider from '@mui/material/Divider';
 
@@ -40,7 +41,7 @@ function VideoCommentList(props) {
         <ListItem key={index}> 
           <ListItemAvatar>
             <Avatar>
-              <ImageIcon />
+              <PersonIcon />
             </Avatar>
           </ListItemAvatar>
           <ListItemText primary={comment['name']} secondary={comment['comment']} />
