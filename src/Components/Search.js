@@ -41,7 +41,6 @@ function Search (props) {
         <div className='search__form'>
           <form className='ui form'>
             <Grid spacing={2}>
-              
               <TextField 
                 id="outlined-size-small"
                 label="Search"
@@ -51,7 +50,6 @@ function Search (props) {
                 onChange={handleSearchChange}
                 value={inputSearch}
               />
-              
               <TextField
                 id="outlined-size-small"
                 label="Max Results"
